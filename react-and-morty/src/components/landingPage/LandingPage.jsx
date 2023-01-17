@@ -13,7 +13,7 @@ export default function LandingPage({onClick}) {
   const [size, setSize] = useState(12);
   
   return (
-    <div id="landingPage">
+    <Container fluid id="landingPage">
 
       <Container fluid>
 
@@ -35,6 +35,6 @@ export default function LandingPage({onClick}) {
         </Row>
       </Container>
         
-    </div>
+    </Container>
   )
 }

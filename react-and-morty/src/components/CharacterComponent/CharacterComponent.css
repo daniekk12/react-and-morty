@@ -1,0 +1,7 @@
+#card{
+    background-color: rgb(197, 178, 140);
+    border-radius: 10%;
+}
+img{
+    border-radius: 10% 10% 0 0;
+}

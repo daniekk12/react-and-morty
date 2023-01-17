@@ -1,7 +1,4 @@
-#root {
-    height: 100vh;
-    overflow: auto;
-}
+
 .App{
     backdrop-filter: blur(2px);
     height: 100vh;

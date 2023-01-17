@@ -22,7 +22,6 @@ function App() {
   }
   
   return (
-    
     <div className="App">
       <LandingPage onClick={cardShowHandler}></LandingPage>
       <CardListComponent characters={characters} show={showCharacters}/>

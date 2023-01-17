@@ -1,8 +1,18 @@
 #cardContainer{
     display: grid;
     justify-content: center;
-    grid-template-columns: 18.5% 18.5% 18.5%;
+    grid-template-columns: 15% 15% 15% 15%;
     gap: 2.5% 7% ;
+    overflow: visible;
+    height: 100%;
+}
+.container{
+color:white;
+display: flex;
+align-self: center;
+gap: 50px;
+border: 2px black;
+border-style: groove;
 }
 @media only screen and (max-width: 950px){
     #cardContainer{
@@ -10,3 +20,4 @@
         gap: 0.5%;
     }
 }
+

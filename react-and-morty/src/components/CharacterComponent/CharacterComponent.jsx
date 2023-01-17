@@ -2,12 +2,15 @@ import React from 'react';
 import CardComponent from 'react-bootstrap/Card';
 import './CharacterComponent.css'
 function CharacterComponent({character}) {
+  const descriptionCard=(e)=>{
+    console.log(e.target.parentNode)
+}
   return (
-    <CardComponent fluid id="card">
+    <CardComponent fluid="True" id="card" onClick={(e)=>{descriptionCard(e)}}>
       <CardComponent.Img variant="left" src={character.image}/>
       <CardComponent.Body>
-        <CardComponent.Title fluid>{character.name}</CardComponent.Title>
-        <CardComponent.Text fluid>
+        <CardComponent.Title fluid="True">{character.name}</CardComponent.Title>
+        <CardComponent.Text fluid="True">
             {character.species}
         </CardComponent.Text>
       </CardComponent.Body>

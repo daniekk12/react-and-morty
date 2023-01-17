@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image'
 
-export default function LandingPage() {
+export default function LandingPage({onClick}) {
   
   const [size, setSize] = useState(12);
   
@@ -25,11 +25,11 @@ export default function LandingPage() {
         <Row className="justify-content-center" fluid id="btnRow">
 
           <Col xs="auto">
-            <Button variant="primary" id="characters">Characters</Button>
+            <Button variant="primary" id="characters" onClick={(e)=>{onClick(e)}}>Characters</Button>
           </Col>
 
           <Col xs="auto">
-            <Button variant="success" id="location"> Locations </Button>
+            <Button variant="success" id="location" onClick={(e)=>{onClick(e)}}> Locations </Button>
           </Col>
 
         </Row>

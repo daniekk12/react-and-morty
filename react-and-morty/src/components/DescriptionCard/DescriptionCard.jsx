@@ -6,7 +6,7 @@ import './DescriptionCard.css'
 function ShowHideButton(){
   const [isVisible, setVisibility] = useState(true)
   const handleClick = () => {
-    !setVisibility
+    
   }
 }
 function DescriptionCard({character}){

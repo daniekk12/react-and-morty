@@ -20,9 +20,9 @@ export default function LandingPage({onClick}) {
         <Row>
           <center><Image src={Logo} fluid="True" id="logo"/></center>
         </Row>
-      {trebuie &&
+      
       <p id="description">Welcome!<br />Our site contains all information about Rick and Morty characters and their locations. <br />Click any of the buttons to get started!
-      </p>}
+      </p>
 
 
         <Row className="justify-content-center" fluid="True" id="btnRow">

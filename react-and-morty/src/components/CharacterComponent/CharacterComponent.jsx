@@ -3,7 +3,7 @@ import CardComponent from 'react-bootstrap/Card';
 import './CharacterComponent.css'
 function CharacterComponent({character}) {
   const descriptionCard=(e)=>{
-    console.log(e.target.parentNode)
+    
 }
   return (
     <CardComponent fluid="True" id="card" onClick={(e)=>{descriptionCard(e)}}>

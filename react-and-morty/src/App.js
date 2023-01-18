@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardListComponent from "./components/CardListComponent/CardListComponent"
 import Button from "react-bootstrap/Button"
 import "./App.css";
@@ -24,13 +24,18 @@ function App() {
         break
     }
   }
+  
+  const checkDescriptionCard = (e) => {
+    if (e) {
+      
+    }
+  }
   return (
     <div className="App">
       <LandingPage onClick={cardShowHandler}></LandingPage>
-      <CardListComponent characters={characters} show= {showCharacters}/>
+      <CardListComponent characters={characters} show= {showCharacters} checkDesc={checkDescriptionCard} data-pageLoad = 'character-card-0'/>
       <LocationListComponent location = {locations} show = {showLocations}/>
     </div>
-    
   )
 }
 

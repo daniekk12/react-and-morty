@@ -3,18 +3,21 @@ import Container from "react-bootstrap/esm/Container";
 import { useCharacters,useLocations } from "../../api/useData";
 import './CardListComponent.css'
 import React, { useState } from "react";
-import Button from "react-bootstrap/esm/Button";
-import ReactPaginate from 'react-paginate';
-import Pagination from 'react-bootstrap/Pagination'
-import PageItem from 'react-bootstrap/PageItem'
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+import './LocationListComponent.css'
+
+
 
 function LocationListComponent (props){
     const[page,setPage]=useState(1)
+    let currentPage = 1;
     let LocationCard=useLocations(page)
     let LocationInfo = LocationCard['info'];
     let Location = LocationCard['results']
-    const increment=()=>{
-        setPage(page+1)
+    const changePage = (event, value) =>{
+        
+        setPage(value);
     }
     const veryPrettyPleaseImBeggingYou2=()=>{
         if(Location!==undefined)
@@ -29,30 +32,24 @@ function LocationListComponent (props){
         }
         
     return(
-        props.show && 
+        props.show && <Container fluid>
             <Container fluid="True" id="cardContainer">
-            {
-            veryPrettyPleaseImBeggingYou2()
-            }
-            <button onClick={()=>increment()}>Apasa-ma</button>
-            <Pagination>
-                <Pagination.First />
-                <Pagination.Prev />
-                <Pagination.Item>{1}</Pagination.Item>
-                <Pagination.Ellipsis />
-                    
-                <Pagination.Item>{10}</Pagination.Item>
-                <Pagination.Item>{11}</Pagination.Item>
-                <Pagination.Item active>{12}</Pagination.Item>
-                <Pagination.Item>{13}</Pagination.Item>
-                <Pagination.Item disabled>{14}</Pagination.Item>
-                    
-                <Pagination.Ellipsis />
-                <Pagination.Item>{20}</Pagination.Item>
-                <Pagination.Next />
-                <Pagination.Last />
-            </Pagination>
-        </Container>
+                {
+                veryPrettyPleaseImBeggingYou2()
+                }
+            </Container>
+            <Container fluid id="paginate">
+                <Stack>
+                    <Pagination 
+                        onChange={changePage} 
+                        count={LocationInfo['pages']} 
+                        color="primary"
+                    />
+                </Stack>
+
+            </Container>
+        
+        </Container> 
         
     )
 }

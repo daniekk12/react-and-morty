@@ -3,20 +3,20 @@ import CardComponent from 'react-bootstrap/Card';
 import { useState } from 'react';
 import './DescriptionCard.css'
 
-function ShowHideButton(){
-  const [isVisible, setVisibility] = useState(true)
-  const handleClick = () => {
-    
-  }
-}
+
 function DescriptionCard({character}){
+  console.log(character);
     return (
-        <CardComponent fluid="True" id="cardInfo">
-          <CardComponent.Img variant="left"/>
+        <CardComponent fluid="True" id="cardInfo" data-moreInformation = 'cardInfo'>
+          <CardComponent.Img variant="left" src={character.image}/>
           <CardComponent.Body>
-            <CardComponent.Title fluid="True">DA</CardComponent.Title>
+            <CardComponent.Title fluid="True">{character.name}</CardComponent.Title>
             <CardComponent.Text fluid="True">
-                DA
+                Species: {character.species} <br />
+                Gender: {character.gender} <br />
+                Location: {character.location.name} <br />
+                Origin: {character.origin.name} <br />
+                Status: {character.status}
             </CardComponent.Text>
           </CardComponent.Body>
         </CardComponent>

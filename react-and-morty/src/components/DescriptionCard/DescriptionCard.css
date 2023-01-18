@@ -1,14 +1,4 @@
 #cardInfo{
-    width: 40%;
-    background-color: aqua;
-    align-self: center;
-    justify-self: center;
-    position:absolute;
-    text-align: center;
-    box-shadow: 0px 0px 300px 500px rgba(0,0,0,0.75);}
-
-#toggleDescription{
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
+  background-color: wheat;
 }
+

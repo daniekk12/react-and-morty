@@ -11,6 +11,7 @@ import Image from 'react-bootstrap/Image'
 export default function LandingPage({onClick,trebuie}) {
   
   const [size, setSize] = useState(12);
+  const [isVisible,setIsVisible]=useState(true)
   
   return (
     <Container fluid="True" id="landingPage">
@@ -21,18 +22,19 @@ export default function LandingPage({onClick,trebuie}) {
           <center><Image src={Logo} fluid="True" id="logo"/></center>
         </Row>
       
-      <p id="description">Welcome!<br />Our site contains all information about Rick and Morty characters and their locations. <br />Click any of the buttons to get started!
-      </p>
-
+      {
+        isVisible&&<p id="description">Welcome!<br />Our site contains all information about Rick and Morty characters and their locations. <br />Click any of the buttons to get started!
+        </p>
+      }
 
         <Row className="justify-content-center" fluid="True" id="btnRow">
 
           <Col xs="auto">
-            <Button variant="primary" id="characters" onClick={(e)=>{onClick(e)}}>Characters</Button>
+            <Button variant="primary" id="characters" onClick={(e)=>{onClick(e);setIsVisible(false)}}>Characters</Button>
           </Col>
 
           <Col xs="auto">
-            <Button variant="success" id="location" onClick={(e)=>{onClick(e)}}> Locations </Button>
+            <Button variant="success" id="location" onClick={(e)=>{onClick(e);setIsVisible(false)}}> Locations </Button>
           </Col>
 
         </Row>

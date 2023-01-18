@@ -5,18 +5,49 @@ import './CardListComponent.css'
 import React, { useState } from "react";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import DescriptionCard from "../DescriptionCard/DescriptionCard";
 let pageSize = 20
+let trebuie=false
+let Click;
 function CardListComponent (props){
     const[page,setPage]=useState(1)
+    const [descriptionCardVisible, setDescriptionCardVisible] = useState(false);
+    const [charInfo, setCharInfo] = useState({});
     let CardCharacters=useCharacters(page)
     let charactersInfo = CardCharacters['info'];
     let Characters=CardCharacters['results']
+    
+    const changePage = (event, value) => {
+        setPage(value);
+    }
+    
+    let descriptionCardInfo=(e)=>{
+        setCharInfo(e)
+        setDescriptionCardVisible(true)
+        console.log('chemat description')
+    }
+    let createDescriptionCard=(info)=>{
+        if(info==undefined)
+        {   
+            return
+        }
+        props.checkDesc(descriptionCardVisible)
+        console.log('chemat create')
+        return (
+            <Container  id="descriptionContainer">
+            <DescriptionCard character={info} />
+            </Container>
+            )
+        
+        
+    }
+
     const veryPrettyPleaseImBeggingYou=()=>{
         if(Characters!==undefined)
         {
-            return Characters.map((e,i)=>{
+            return Characters.map((element,i)=>{
                 return (
-                    <CharacterComponent key={i} character={e}></CharacterComponent>
+                    <CharacterComponent key={i} character={element} onClick={()=>{descriptionCardInfo(element)}}></CharacterComponent>
                     )
                 })
             } 
@@ -25,17 +56,27 @@ function CardListComponent (props){
     
     return(
         
-        props.show && <div style={{height:"1500px"}}>
-            <Container fl   uid="True" id="cardContainer">
+        props.show && <Container fluid>
+            
             {
-            veryPrettyPleaseImBeggingYou()
+                    descriptionCardVisible && createDescriptionCard(charInfo)
+            }
+            
+            <Container fluid="True" id="cardContainer">
+            {
+                veryPrettyPleaseImBeggingYou()
             }
             </Container>
             
-            <Stack sx={{backgroundColor:"red",width:"1000px",justifyContent:"space-between"}}>
-              <Pagination sx={{width:"1000px",justifyContent:"space-between"}} onChange={(e) => setPage(parseInt(e.target.innerText))}count={42} color="primary" />
+            <Stack>
+            <Pagination
+                        id="pagination" 
+                        onChange={changePage} 
+                        count={charactersInfo['pages']} 
+                        color="primary"
+                    />
             </Stack>
-            </div>
+            </Container>
     )
 }
-export default CardListComponent
+export default CardListComponent;

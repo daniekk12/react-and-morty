@@ -1,9 +1,11 @@
 #characters {
+    margin-top: 30%;
     font-size: 2vw;
 }
 
 #location {
     font-size: 2vw;
+    margin-top: 30%;
 }
 
 #btnRow {

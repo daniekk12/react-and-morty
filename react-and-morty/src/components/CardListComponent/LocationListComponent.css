@@ -50,11 +50,10 @@ display: flex;
 }
 
 html body #root .App div nav ul li .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
-    background-color: rgb(57, 211, 57) ;
+    background-color: rgb(57, 211, 57) !important;
 }
 
-html body #root .App div nav ul li button .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root.css-nen11g-MuiStack-root {
-    color: #fff;
+html body #root .App div .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
     background-color: rgb(57, 211, 57) ;
 }
 
@@ -63,12 +62,4 @@ html body #root .App div .css-nen11g-MuiStack-root nav{
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-}
-#descriptionContainer{
-justify-content: center;
-align-items: center;
-color: black;
-align-self: center;
-background-color: black;
-z-index: 100;
 }

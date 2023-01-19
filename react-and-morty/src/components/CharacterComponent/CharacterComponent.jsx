@@ -1,5 +1,3 @@
-import React from 'react';
-import { useEffect } from 'react';
 import CardComponent from 'react-bootstrap/Card';
 import './CharacterComponent.css'
 function CharacterComponent({character,onClick}) {
@@ -10,8 +8,6 @@ function CharacterComponent({character,onClick}) {
       behavior: "smooth"
     })
   }
-
-
 
   return (
     <CardComponent fluid="True" id="card" onClick={() => {scroll(); onClick()}}>

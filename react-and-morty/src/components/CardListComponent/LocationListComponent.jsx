@@ -1,22 +1,18 @@
 import LocationsComponent from '../LocationsComponent/LocationsComponent'
 import Container from "react-bootstrap/esm/Container";
-import { useCharacters,useLocations } from "../../api/useData";
+import { useLocations } from "../../api/useData";
 import './CardListComponent.css'
-import React, { useState } from "react";
+import { useState } from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import './LocationListComponent.css'
 
-
-
 function LocationListComponent (props){
     const[page,setPage]=useState(1)
-    let currentPage = 1;
     let LocationCard=useLocations(page)
     let LocationInfo = LocationCard['info'];
     let Location = LocationCard['results']
-    const changePage = (event, value) =>{
-        
+    const changePage = (value) =>{
         setPage(value);
     }
     const veryPrettyPleaseImBeggingYou2=()=>{

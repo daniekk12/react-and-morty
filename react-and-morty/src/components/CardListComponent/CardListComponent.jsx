@@ -6,9 +6,7 @@ import React, { useState } from "react";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import DescriptionCard from "../DescriptionCard/DescriptionCard";
-let pageSize = 20
-let trebuie=false
-let Click;
+
 function CardListComponent (props){
     const[page,setPage]=useState(1)
     const [descriptionCardVisible, setDescriptionCardVisible] = useState(false);
@@ -24,7 +22,6 @@ function CardListComponent (props){
     let descriptionCardInfo=(e)=>{
         setCharInfo(e)
         setDescriptionCardVisible(true)
-        console.log('chemat description')
     }
     let createDescriptionCard=(info)=>{
         if(info==undefined)
@@ -32,14 +29,11 @@ function CardListComponent (props){
             return
         }
         props.checkDesc(descriptionCardVisible)
-        console.log('chemat create')
         return (
             <Container  id="descriptionContainer">
             <DescriptionCard character={info} />
             </Container>
             )
-        
-        
     }
 
     const veryPrettyPleaseImBeggingYou=()=>{

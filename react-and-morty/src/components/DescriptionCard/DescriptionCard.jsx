@@ -1,8 +1,6 @@
 import React from 'react';
 import CardComponent from 'react-bootstrap/Card';
-import { useState } from 'react';
 import './DescriptionCard.css'
-
 
 function DescriptionCard({character}){
   console.log(character);

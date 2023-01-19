@@ -9,8 +9,6 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image'
 
 export default function LandingPage({onClick,trebuie}) {
-  
-  const [size, setSize] = useState(12);
   const [isVisible,setIsVisible]=useState(true)
   
   return (

@@ -24,7 +24,6 @@ function App() {
         break
     }
   }
-  
   const checkDescriptionCard = (e) => {
     if (e) {
       

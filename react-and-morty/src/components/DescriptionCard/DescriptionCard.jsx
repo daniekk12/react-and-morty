@@ -3,7 +3,6 @@ import CardComponent from 'react-bootstrap/Card';
 import './DescriptionCard.css'
 
 function DescriptionCard({character}){
-  console.log(character);
     return (
         <CardComponent fluid="True" id="cardInfo" data-moreInformation = 'cardInfo'>
           <CardComponent.Img variant="left" src={character.image}/>

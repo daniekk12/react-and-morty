@@ -1,3 +1,6 @@
+*{
+    z-index: 90;
+}
 html body #root .App div nav ul li button{
     color: white;
     font-size: 22px;
@@ -70,4 +73,10 @@ html body #root .App div .css-nen11g-MuiStack-root nav{
     color: black;
     align-self: center;
 }
-
+#descriptionContainer{
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+    z-index: 100;
+}

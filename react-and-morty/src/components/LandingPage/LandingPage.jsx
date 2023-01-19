@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image'
 
-export default function LandingPage({onClick,trebuie}) {
+export default function LandingPage({onClick}) {
   const [isVisible,setIsVisible]=useState(true)
   
   return (

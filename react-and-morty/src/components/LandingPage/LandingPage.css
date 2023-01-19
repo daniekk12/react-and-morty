@@ -20,6 +20,17 @@
     
 }
 
+
+@media only screen and(max-width: 951px){
+    #cardInfo{
+        font-size: 1vw;
+        max-height: 20vh;
+        min-width: 10vw;
+        
+        
+    }
+    
+}
 @media only screen and (max-width: 850px) {
     #description {
         font-size: 8vw;
@@ -42,6 +53,11 @@
 @media only screen and (max-width: 450px){
     #description {
         font-size: 10vw;
+    }
+    #cardInfo{
+        font-size: 5vw;
+        max-height: 50vh;
+        min-width: 50vw;
     }
     #btnRow {
         display: flex;

@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 100%;
     row-gap: 100px;
+    overflow: auto;
 }
 
 @media only screen and (max-width: 950px) {

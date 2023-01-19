@@ -6,7 +6,6 @@ import React, { useState } from "react";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import DescriptionCard from "../DescriptionCard/DescriptionCard";
-
 function CardListComponent (props){
     const[page,setPage]=useState(1)
     const [descriptionCardVisible, setDescriptionCardVisible] = useState(false);
@@ -14,41 +13,51 @@ function CardListComponent (props){
     let CardCharacters=useCharacters(page)
     let charactersInfo = CardCharacters['info'];
     let Characters=CardCharacters['results']
+    let [chemata,setChemata]=useState(false)
     
     const changePage = (event, value) => {
         setPage(value);
     }
     
-    let descriptionCardInfo=(e)=>{
+    const descriptionCardInfo=(e)=>{
         setCharInfo(e)
         setDescriptionCardVisible(true)
     }
-    let createDescriptionCard=(info)=>{
+    const createDescriptionCard=(info)=>{
         if(info==undefined)
         {   
             return
         }
-        props.checkDesc(descriptionCardVisible)
         return (
-            <Container  id="descriptionContainer">
-            <DescriptionCard character={info} />
+            <Container id="cardContainerInfo">
+                <DescriptionCard character={info} />
             </Container>
-            )
+        )
     }
-
+    
     const veryPrettyPleaseImBeggingYou=()=>{
-        if(Characters!==undefined)
-        {
+        if(Characters!==undefined) {
             return Characters.map((element,i)=>{
                 return (
                     <CharacterComponent key={i} character={element} onClick={()=>{descriptionCardInfo(element)}}></CharacterComponent>
-                    )
+                )
                 })
             } 
-            
         }
+        window.addEventListener('mousedown', function(e){ 
+            try{ 
+            if(!document.getElementById('cardInfo').contains(e.target)!==null)
+            {
+                setDescriptionCardVisible(false)
+                return
+            }
+        }
+        catch (e){
+            console.log('suge-o')
+        }
+          });
     
-    return(
+    return (
         
         props.show && <Container fluid>
             

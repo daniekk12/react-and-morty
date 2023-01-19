@@ -1,8 +1,7 @@
 import CardComponent from 'react-bootstrap/Card';
 import './CharacterComponent.css'
 function CharacterComponent({character,onClick}) {
-  const scroll=()=>{
-    console.log('da frate se cheama')
+  const scrollToTop=()=>{
     document.querySelector('.App').scrollTo({
       top: 250,
       behavior: "smooth"
@@ -10,7 +9,7 @@ function CharacterComponent({character,onClick}) {
   }
 
   return (
-    <CardComponent fluid="True" id="card" onClick={() => {scroll(); onClick()}}>
+    <CardComponent fluid="True" id="card" onClick={() => {scrollToTop(); onClick()}}>
       <CardComponent.Img variant="left" src={character.image}/>
       <CardComponent.Body>
         <CardComponent.Title fluid="True">{character.name}</CardComponent.Title>

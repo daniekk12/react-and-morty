@@ -1,5 +1,19 @@
 #cardInfo{
   background-color: wheat;
   border-radius: 10%;
+  box-shadow: 10px 10px 3000px 2000px rgba(0,0,0,0.75);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: fit-content;
+  height: fit-content;
 }
 
+#cardContainerInfo{
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(0, 0);
+}

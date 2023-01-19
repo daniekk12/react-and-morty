@@ -2,7 +2,7 @@
 import Container from "react-bootstrap/esm/Container";
 import { useCharacters } from "../../api/useData";
 import './LocationListComponent.css'
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocations } from "../../api/useData";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
@@ -10,35 +10,42 @@ import LocationDescription from "../LocationDescription/LocationDescription";
 import LocationsComponent from '../LocationsComponent/LocationsComponent'
 function LocationListComponent (props){
     const[page,setPage]=useState(1)
-    const [locationCardVisible, setDescriptionCardVisible] = useState(false);
+    const [locationCardVisible, setLocationCardVisible] = useState(false);
     const [locInfo, setLocInfo] = useState({});
     let CardLocation=useLocations(page)
     let locationsInfo = CardLocation['info'];
     let Locations=CardLocation['results']
     let [chemata,setChemata]=useState(false)
+
+
+    
     
     const changePage = (event, value) => {
         setPage(value);
     }
     
     const descriptionCardInfo=(e)=>{
-        console.log('suge')
         setLocInfo(e)
-        setDescriptionCardVisible(true)
+        setLocationCardVisible(true)
     }
     const createDescriptionCard2=(info)=>{
         if(info==undefined)
         {   
             return
         }
+        document.querySelector('.App').style.overflow = 'hidden';
         return (
                 <LocationDescription location={info} />
         )
     }
-    window.addEventListener('mousedown', function(e){  
-        if(!document.getElementById('cardInfo').contains(e.target)!==null)
-        {
-            setDescriptionCardVisible(false)
+    window.addEventListener('mousedown', function(e){
+        try {
+            if(!document.getElementById('locationCardInfo').contains(e.target)) {
+                document.querySelector('.App').style.overflow = 'auto';
+                setLocationCardVisible(false)
+                return
+            }
+        }  catch (e) {
             return
         }
 

@@ -1,13 +1,24 @@
-#cardInfo{
+html body #cardInfo{
   background-color: wheat;
-  border-radius: 10%;
+  border-radius: 2%;
   box-shadow: 10px 10px 3000px 2000px rgba(0,0,0,0.75);
+  position: sticky;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-  width: fit-content;
-  height: fit-content;
+  min-height: fit-content;
+  width: 50%;
+  font-size: 19px;
+}
+
+
+.cardImg {
+  border-radius: 2%;
+}
+
+.card {
+  color: black;
 }
 
 #cardContainerInfo{
@@ -16,4 +27,12 @@
   left: 50%;
   z-index: 100;
   transform: translate(0, 0);
+}
+
+@media only screen and (max-width: 450px) {
+  html body #cardInfo {
+    font-size: 17px;
+    width: 57%;
+    height: 45%;
+  }
 }

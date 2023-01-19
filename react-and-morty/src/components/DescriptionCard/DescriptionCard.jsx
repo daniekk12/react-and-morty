@@ -4,8 +4,8 @@ import './DescriptionCard.css'
 
 function DescriptionCard({character}){
     return (
-        <CardComponent fluid="True" id="cardInfo" data-moreInformation = 'cardInfo'>
-          <CardComponent.Img variant="left" src={character.image}/>
+        <CardComponent fluid="True" id="cardInfo">
+          <CardComponent.Img className='cardImg' variant="left" src={character.image}/>
           <CardComponent.Body>
             <CardComponent.Title fluid="True">{character.name}</CardComponent.Title>
             <CardComponent.Text fluid="True">

@@ -4,7 +4,7 @@ import './LocationDescription.css'
 
 function LocationDescription({location}){
     return(
-        <CardComponent fluid="True" id="cardInfo">
+        <CardComponent fluid="True" id="locationCardInfo">
           <CardComponent.Body>
             <CardComponent.Title fluid="True">{location.name}</CardComponent.Title>
             <CardComponent.Text fluid="True">

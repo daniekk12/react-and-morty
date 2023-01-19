@@ -4,14 +4,8 @@ import './LocationsComponent.css'
 
 
 function LocationsComponent({location, onClick}) {
-  const scrollToTop = () => {
-    document.querySelector('.App').scrollTo({
-      top: 250,
-      behavior: "smooth"
-    })
-  }
   return (
-    <CardComponent fluid="True" id="card" onClick={() => {scrollToTop();onClick()}}>
+    <CardComponent fluid="True" id="card" onClick={() => { onClick() }}>
       
       <CardComponent.Body>
         <CardComponent.Title fluid="True">{location.name}</CardComponent.Title>

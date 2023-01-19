@@ -1,14 +1,20 @@
-#cardInfo{
-    background-color: wheat;
-    border-radius: 10%;
-    box-shadow: 10px 10px 3000px 2000px rgba(0,0,0,0.75);
-    position: sticky;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    height: 21%;
-    width: 25%;
+html body #locationCardInfo{
+  background-color: wheat;
+  border-radius: 2%;
+  box-shadow: 10px 10px 3000px 2000px rgba(0,0,0,0.75);
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  min-height: fit-content;
+  width: 50%;
+  font-size: 19px;
+}
+  @media only screen and (max-width: 450px) {
+    html body #locationCardInfo {
+      font-size: 17px;
+      width: 56%;
+    }
   }
-  
   

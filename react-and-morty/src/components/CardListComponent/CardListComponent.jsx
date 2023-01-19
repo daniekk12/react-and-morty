@@ -28,6 +28,7 @@ function CardListComponent (props){
         {   
             return
         }
+        document.querySelector('.App').style.overflow = 'hidden';
         return (
             <Container id="cardContainerInfo">
                 <DescriptionCard character={info} />
@@ -46,14 +47,15 @@ function CardListComponent (props){
         }
         window.addEventListener('mousedown', function(e){ 
             try{ 
-            if(!document.getElementById('cardInfo').contains(e.target)!==null)
-            {
+            if(!document.getElementById('cardInfo').contains(e.target))
+            {   
+                document.querySelector('.App').style.overflow = 'auto';
                 setDescriptionCardVisible(false)
                 return
             }
         }
         catch (e){
-            console.log('suge-o')
+            return
         }
           });
     

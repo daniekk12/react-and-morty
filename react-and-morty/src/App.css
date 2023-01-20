@@ -1,5 +1,4 @@
-
-.App{
+.App {
     backdrop-filter: blur(2px);
     height: 100vh;
     display: grid;
@@ -10,19 +9,17 @@
 
 @media only screen and (max-width: 950px) {
     #root {
-        background-image: url('./img/bg_phone.jpg');
+        background-image: url("./img/bg_phone.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-   
     }
 }
 
 @media only screen and (min-width: 950px) {
     #root {
-        background-image: url('./img/bg_pc.png');
+        background-image: url("./img/bg_pc.png");
         background-size: cover;
         background-repeat: no-repeat;
-        
     }
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardListComponent from "./components/CardListComponent/CardListComponent"
 import "./App.css";
 import { useCharacters, useLocations } from "./api/useData";

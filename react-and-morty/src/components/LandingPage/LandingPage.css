@@ -1,8 +1,4 @@
-#characters {
-    margin-top: 30%;
-    font-size: 2vw;
-}
-
+#characters,
 #location {
     font-size: 2vw;
     margin-top: 30%;
@@ -12,25 +8,21 @@
     gap: 15%;
 }
 
-#description{
+#description {
     font-size: 3.5vw;
     text-align: center;
     color: #ffffff;
     text-shadow: 2px 2px 0 #323030, 4px 4px 0 #323030;
-    
 }
 
-
-@media only screen and(max-width: 951px){
-    #cardInfo{
+@media only screen and (max-width: 951px) {
+    #cardInfo {
         font-size: 1vw;
         max-height: 20vh;
         min-width: 10vw;
-        
-        
     }
-    
 }
+
 @media only screen and (max-width: 850px) {
     #description {
         font-size: 8vw;
@@ -44,17 +36,17 @@
     #characters {
         font-size: 4vw;
     }
-    
+
     #location {
         font-size: 4vw;
     }
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 450px) {
     #description {
         font-size: 10vw;
     }
-    #cardInfo{
+    #cardInfo {
         font-size: 5vw;
         max-height: 50vh;
         min-width: 50vw;
@@ -68,9 +60,8 @@
     #characters {
         font-size: 6vw;
     }
-    
+
     #location {
         font-size: 6vw;
     }
-
 }

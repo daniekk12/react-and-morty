@@ -1,0 +1,124 @@
+* {
+    z-index: 90;
+}
+
+%bgcolor {
+    background-color: rgb(57, 211, 57);
+}
+
+%white {
+    color: white;
+}
+
+%fs22 {
+    font-size: 22px;
+}
+
+%fw700 {
+    font-weight: 700;
+}
+
+%flex {
+    display: flex;
+}
+
+%flexcol {
+    flex-direction: column;
+}
+
+%aligncenter {
+    align-items: center;
+}
+
+%mb20 {
+    margin-bottom: 20px;
+}
+
+html body #root .App div {
+    nav ul li {
+        .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+            @extend %bgcolor;
+        }
+
+        div {
+            @extend %white;
+            @extend %fs22;
+        }
+
+        button {
+            @extend %white;
+            @extend %fs22;
+            @extend %fw700;
+
+            &:hover {
+                @extend %bgcolor;
+                @extend %fs22;
+                @extend %fw700;
+            }
+
+            &:active {
+                @extend %bgcolor;
+                @extend %fs22;
+                @extend %fw700;
+            }
+        }
+    }
+
+    .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root.css-nen11g-MuiStack-root {
+        @extend %white;
+        @extend %bgcolor;
+    }
+
+    .css-nen11g-MuiStack-root nav {
+        @extend %flex;
+        @extend %flexcol;
+        @extend %aligncenter;
+        @extend %mb20;
+    }
+}
+
+#cardContainer {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 15% 15% 15% 15%;
+    height: fit-content;
+    margin-bottom: 50px;
+    padding-bottom: 100px;
+}
+
+.container {
+    @extend %flex;
+    @extend %white;
+}
+
+#card {
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 950px) {
+    #cardContainer {
+        grid-template-columns: 50%;
+    }
+}
+
+#pagination {
+    @extend %flex;
+    @extend %flexcol;
+    @extend %aligncenter;
+    @extend %mb20;
+}
+
+#descriptionContainer {
+    @extend %aligncenter;
+    justify-content: center;
+    color: black;
+    align-self: center;
+}
+
+#descriptionContainer {
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+    z-index: 100;
+}

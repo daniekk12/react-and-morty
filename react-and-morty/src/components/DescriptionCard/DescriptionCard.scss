@@ -1,0 +1,46 @@
+%sticky {
+    position: sticky;
+    top: 50%;
+    z-index: 100;
+    left: 50%;
+}
+
+html body #cardInfo {
+    @extend %sticky;
+
+    background-color: wheat;
+    border-radius: 2%;
+    box-shadow: 10px 10px 3000px 2000px rgba(0, 0, 0, 0.75);
+    transform: translate(-50%, -50%);
+    min-height: fit-content;
+    width: 50%;
+    font-size: 19px;
+}
+
+.cardImg {
+    border-radius: 2%;
+}
+
+.card {
+    color: black;
+}
+
+#cardContainerInfo {
+    @extend %sticky;
+    transform: translate(0, 0);
+}
+
+@media only screen and (max-width: 450px) {
+    html body #cardInfo {
+        font-size: 17px;
+        width: 57%;
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html body #cardInfo {
+        font-size: 13px;
+        height: 60%;
+    }
+}

@@ -1,11 +1,9 @@
-#card{
+#card {
     background-color: rgb(197, 178, 140);
     border-radius: 10%;
 }
+
 html body #card .card-img {
     border-radius: 10% 10% 0 0;
     width: 100%;
-}
-@media only screen and (max-width: 850px) {
-    
 }
